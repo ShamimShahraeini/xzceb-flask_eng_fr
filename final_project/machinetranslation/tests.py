@@ -13,3 +13,14 @@ class TestTranslatorMethod(unittest.TestCase):
         frenchText = 'Bonjour'
         second = 'Hello'
         self.assertEqual(french_to_english(frenchText), second, msg='Passed')
+
+
+    def test_englishToFrench(self):
+        englishText = 'Hello'
+        second = 'Bonjour'
+        self.assertNotEqual(english_to_french(englishText), second, msg='Failed')
+
+    def test_frenchToEnglish(self):
+        frenchText = 'Bonjour'
+        second = 'Hello'
+        self.assertNotEqual(french_to_english(frenchText), second, msg='Faild')
